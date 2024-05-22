@@ -1,0 +1,82 @@
+# tictactoe.kv
+
+<TicTacToeLayout>:
+    orientation: 'vertical'
+    padding: dp(20)
+    spacing: dp(20)
+    size_hint: None, None
+    size: 400, 500
+
+    MDLabel:
+        text: "Tic Tac Toe"
+        halign: "center"
+        font_style: "H4"
+        theme_text_color: "Custom"
+        text_color: 1, 0, 2, 1
+
+    MDLabel:
+        text: "Creator_Dhananjay Ladole"
+        halign: "center"
+        font_style: "Caption"
+        theme_text_color: "Secondary"
+
+    MDRaisedButton:
+        text: "Restart"
+        halign: "center"
+        on_press: app.restart_game()
+        md_bg_color: 0, 2, 0, 2
+
+    MDLabel:
+        id: score_label
+        text: "X Score: 0 | O Score: 0"
+        halign: "center"
+
+    GridLayout:
+        cols: 3
+        spacing: dp(5)
+        padding: dp(10)
+
+        Button:
+            id: btn_00
+            text: " "
+            on_press: app.on_button_press(0, 0)
+
+        Button:
+            id: btn_01
+            text: " "
+            on_press: app.on_button_press(0, 1)
+
+        Button:
+            id: btn_02
+            text: " "
+            on_press: app.on_button_press(0, 2)
+
+        Button:
+            id: btn_10
+            text: " "
+            on_press: app.on_button_press(1, 0)
+
+        Button:
+            id: btn_11
+            text: " "
+            on_press: app.on_button_press(1, 1)
+
+        Button:
+            id: btn_12
+            text: " "
+            on_press: app.on_button_press(1, 2)
+
+        Button:
+            id: btn_20
+            text: " "
+            on_press: app.on_button_press(2, 0)
+
+        Button:
+            id: btn_21
+            text: " "
+            on_press: app.on_button_press(2, 1)
+
+        Button:
+            id: btn_22
+            text: " "
+            on_press: app.on_button_press(2, 2)
